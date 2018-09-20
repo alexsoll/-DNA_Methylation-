@@ -4,7 +4,7 @@ from scipy import stats
 
 def get_ages():
     ages = [] 
-    f = open("C:\\Users\\alsol\\source\\repos\\DNA_test\\age.txt", 'r', encoding="utf-8")
+    f = open("age.txt", 'r', encoding="utf-8")
     ages = f.read().split()
     for i in range(len(ages)): 
        ages[i] = int(ages[i]) 
@@ -46,7 +46,7 @@ def calculate_spearman_corr(file):
 
 
 def main():
-    file = open("C:\\Users\\alsol\\source\\repos\\DNA_test\\gene_data.txt", 'r', encoding="utf-8")
+    file = open("gene_data.txt", 'r', encoding="utf-8")
     print("Spearman's correlation.\nThe first 10 genes that have the highest correlation coefficient are:")
     calculate_spearman_corr(file)
     file.close()
